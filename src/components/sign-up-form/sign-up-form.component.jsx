@@ -3,9 +3,9 @@ import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from '../../utils/firebase/firebase.utils';
+import Button from '../button/button.component';
 import FormInput from '../form-input/form-input.component';
 import './sing-up-form.style.scss';
-import Button from '../button/button.component';
 
 const defaultFormFields = {
   displayName: '',
