@@ -4,8 +4,8 @@ import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.componen';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import { selectIsCartOpen } from '../../store/cart/cart.selector';
-import { signOutStart } from '../../store/user/user.action';
 import { selectCurrentUser } from '../../store/user/user.selector';
+import { signOut } from '../../store/user/user.slice';
 import { LogoContainer, NavLink, NavLinks, NavigationContainer } from './navigation.styles';
 
 const Navigation = () => {
@@ -13,7 +13,7 @@ const Navigation = () => {
   const currentUser = useSelector(selectCurrentUser);
   const isCartOpen = useSelector(selectIsCartOpen);
 
-  const signOutUser = () => dispatch(signOutStart());
+  const signOutUser = () => dispatch(signOut());
 
   return (
     <>
