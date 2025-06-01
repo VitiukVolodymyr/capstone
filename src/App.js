@@ -20,12 +20,14 @@ const App = () => {
       if (user) {
         createUserDocumentFromAuth(user);
       }
-      const pickedUser = user ? { accessToken: user.accessToken, email: user.email } : null;
+      const pickedUser = user
+        ? { accessToken: user.accessToken, email: user.email, displayName: user.displayName }
+        : null;
       dispatch(setCurrentUser(pickedUser));
     });
 
     return unsubscribe;
-  }, []);
+  }, [dispatch]);
 
   return (
     <Routes>
