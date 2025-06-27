@@ -1,31 +1,49 @@
 {
-    "printWidth": 100,
-    "tabWidth": 2,
-    "useTabs": false,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "all",
-    "bracketSpacing": true,
-    "jsxBracketSameLine": false,
-    "arrowParens": "avoid",
-    "proseWrap": "preserve",
-    "endOfLine": "lf",
-    "htmlWhitespaceSensitivity": "ignore",
-    "quoteProps": "consistent",
-    "embeddedLanguageFormatting": "auto",
-    "overrides": [
-        {
-            "files": "*.component.html",
-            "options": {
-                "parser": "angular",
-                "printWidth": 120
-            }
-        },
-        {
-            "files": "*.ts",
-            "options": {
-                "parser": "typescript"
-            }
-        }
-    ]
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "proseWrap": "preserve",
+  "endOfLine": "lf",
+  "quoteProps": "consistent",
+  "embeddedLanguageFormatting": "auto",
+  "importOrder": [
+    "^react(.*)$",
+    "^next(.*)$",
+    "^@stripe/(.*)$",
+    "^@reduxjs/(.*)$",
+    "^redux(.*)$",
+    "^react-redux$",
+    "^firebase(.*)$",
+    "^stripe$",
+    "^[a-zA-Z](.*)$",
+    "^@/utils/(.*)$",
+    "^@/components/(.*)$",
+    "^@/hooks/(.*)$",
+    "^@/context/(.*)$",
+    "^@/pages/(.*)$",
+    "^@/store/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": {
+        "parser": "typescript"
+      }
+    },
+    {
+      "files": "*.tsx",
+      "options": {
+        "parser": "typescript"
+      }
+    }
+  ]
 }
