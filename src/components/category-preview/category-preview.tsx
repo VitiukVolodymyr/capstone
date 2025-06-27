@@ -13,7 +13,7 @@ const CategoryPreview = ({ title, products }: CategoryPreviewProps) => {
   return (
     <div className="mb-8 flex flex-col">
       <h2 className="mb-6 text-2xl">
-        <Link href={`shop/${title}`} className="hover:underline">
+        <Link href={`/shop/${title}`} className="hover:underline">
           {title.toUpperCase()}
         </Link>
       </h2>
